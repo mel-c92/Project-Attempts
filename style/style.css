@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(218, 218, 218);
+  position: relative;
+  background: url(../img/skyscape_bg.jpg) center/cover;
+  text-align: center;
+}
+
+span {
+  border-radius: 100px;
+  position: absolute;
+  /* mix-blend-mode: difference; */
+}
+.pointer {
+  background: rgba(173, 101, 240, 0.747);
+  height: 15px;
+  width: 15px;
+  transform: translate(-50%, -50%);
+}
+.pointerBg {
+  background: rgba(255, 255, 255, 0.5);
+  height: 80px;
+  width: 80px;
+  transform: translate(-50%, -50%);
+}
+header {
+  background: #000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 150px;
+}
+nav {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  font-size: 2rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+li {
+  font-size: 1.2rem;
+}
+/* ****** MAIN ****** */
+
+/* ****** INTRO ****** */
+.intro {
+  margin: 100px 0;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+/* ****** SECTION 1 ****** */
+.sec1 {
+}
