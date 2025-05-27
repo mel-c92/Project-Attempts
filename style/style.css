@@ -12,6 +12,21 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+  z-index: 500;
+}
+a:visited {
+  color: rgb(218, 218, 218);
+}
+a:hover {
+  color: rgba(236, 74, 182, 0.747);
+}
+li:hover {
+  transform: scale(1.3);
+}
+
 span {
   border-radius: 100px;
   position: absolute;
@@ -59,12 +74,6 @@ ul {
 li {
   font-size: 1.2rem;
 }
-/* ****** MAIN ****** */
-
-/* ****** INTRO ****** */
-.intro {
-  margin: 100px 0;
-}
 h1 {
   font-size: 4rem;
 }
@@ -74,7 +83,86 @@ h2 {
   font-style: italic;
   margin-top: -10px;
 }
+h4 {
+  font-size: 1.8rem;
+}
+p {
+  padding: 20px 0;
+}
+/* ****** MAIN ****** */
 
-/* ****** SECTION 1 ****** */
-.sec1 {
+/* ****** INTRO ****** */
+.intro {
+  margin: 100px 0;
+}
+
+/* ****** SECTION 1 à 3 ****** */
+.sec1,
+.sec2,
+.sec3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px auto;
+}
+
+.sec1,
+.sec2 {
+  border-bottom: 1.5px solid rgba(173, 101, 240, 0.5);
+}
+
+.sec1left {
+  background: url(../img/nebula.jpg) center/cover;
+  opacity: 0.7;
+}
+.sec2right {
+  background: url(../img/galaxy.jpg) center/cover;
+  opacity: 0.7;
+}
+.sec3left {
+  background: url(../img/blackhole.jpg) center/cover;
+  opacity: 0.7;
+}
+
+.sec1right,
+.sec3right {
+  background: rgba(245, 245, 245, 0.2);
+  padding: 50px;
+  text-align: left;
+}
+.sec2left {
+  background: rgba(245, 245, 245, 0.2);
+  padding: 50px;
+  text-align: right;
+}
+
+/* ****** FOOTER ****** */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  background: #000000;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.pic {
+  background: url(../img/astronaut.jpg) center/cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  box-shadow: rgba(236, 74, 182, 0.747)-8px 6px 11px 0px;
+  margin: 0 auto;
+}
+
+.network {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.network li {
+  font-size: 1.5rem;
 }
