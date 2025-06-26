@@ -82,7 +82,6 @@ table.pop();
 // console.log(table);
 
 // INTERACTIONS AVEC LE WEB: CONDITIONS
-let score = 0;
 // let motUser = prompt("Entrez le mot: " + listeMots);
 
 // IF / ELSE (condition doit être boolean ou comparaison)
@@ -101,14 +100,44 @@ let score = 0;
 //     console.log("Vous avez fait une erreur de frappe");
 //     break;
 // }
-// EXO UTILISATION BOUCLE FOR
-for (i = 0; i < listeMots.length; i++) {
-  let motUser = prompt("Entrez le mot : " + listeMots[i]);
-  if (motUser === listeMots[i]) {
-    score++;
-  }
+// EXO UTILISATION BOUCLE FOR ET INTERACTION JS/WEB \\
+function afficherResultat(score, nbMotsProp) {
+  alert(`Votre score est de : ${score}/${nbMotsProp}`);
 }
-let loadScore = `Votre score est de ${score}/${listeMots.length}`;
-console.log(loadScore);
 
+function choisirPhrasesouMots() {
+  let choix = prompt("Voulez vous jouer avec des mots ou des phrases ?");
+  while (choix !== "mots" && choix !== "phrases")
+  {
+    choix = prompt("Vous devez d'abord choisir entre 'phrases' ou 'mots' !");
+  }
+  return choix;
+}
 
+function lancerListes(liste) {
+  let score = 0;
+  for (let i = 0; i < liste.length; i++) {
+    let motUser = prompt("Veuillez écrire ce qui suit : " + liste[i]);
+    if (motUser === liste[i]) {
+      score++;
+    }
+  }
+  return score;
+}
+
+let lancerJeu = () => {
+  let choix = choisirPhrasesouMots();
+  let score = 0;
+  let nbMotsProp = 0;
+
+  if (choix === "mots") {
+    score = lancerListes(listeMots);
+    nbMotsProp = listeMots.length;
+  } else {
+    score = lancerListes(listePhrases);
+    nbMotsProp = listePhrases.length;
+  }
+
+  afficherResultat(score, nbMotsProp);
+};
+// lancerJeu();
