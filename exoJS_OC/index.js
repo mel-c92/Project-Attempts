@@ -82,10 +82,10 @@ table.pop();
 // console.log(table);
 
 // INTERACTIONS AVEC LE WEB: CONDITIONS
-let motApp = "bonjour";
-// let motUser = prompt("Entrez le mot: " + motApp);
+let score = 0;
+// let motUser = prompt("Entrez le mot: " + listeMots);
 
-// IF / ELSE
+// IF / ELSE (condition doit être boolean ou comparaison)
 // if (motUser === motApp) {
 //   console.log("Bravo vous avez bien écrit le mot");
 // } else {
@@ -101,3 +101,14 @@ let motApp = "bonjour";
 //     console.log("Vous avez fait une erreur de frappe");
 //     break;
 // }
+// EXO UTILISATION BOUCLE FOR
+for (i = 0; i < listeMots.length; i++) {
+  let motUser = prompt("Entrez le mot : " + listeMots[i]);
+  if (motUser === listeMots[i]) {
+    score++;
+  }
+}
+let loadScore = `Votre score est de ${score}/${listeMots.length}`;
+console.log(loadScore);
+
+
