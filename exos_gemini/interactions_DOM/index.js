@@ -48,4 +48,49 @@ btn.addEventListener("click", () => {
 });
 
 // VALIDER UN FORMULAIRE SIMPLE
-const form = document.querySelector("form");
+const form = document.getElementById("subscription");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const smallName = document.getElementById("user-name");
+const smallEmail = document.getElementById("user-email");
+const spanSubmit = document.getElementById("submit-message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (name.value === "") {
+    smallName.innerText = "Le nom de l'utilisateur ne peut pas être vide";
+    smallName.classList.add("display-small");
+  } else if (email.value === "") {
+    smallEmail.innerText = "Vous devez renseigner votre mail";
+    smallEmail.classList.add("display-small");
+  }
+  spanSubmit.innerText = "Le formulaire a été envoyé, merci !";
+
+  name.value = "";
+  email.value = "";
+});
+
+//  FILTRER UNE LISTE //
+const input = document.getElementById("filter");
+const taskList = document.getElementById("tasks-list");
+const allLis = taskList.querySelectorAll("li");
+
+input.addEventListener("input", (e) => {
+  let valeurRecherchee = e.target.value;
+  valeurRecherchee = valeurRecherchee.toLowerCase();
+
+  allLis.forEach((li) => {
+    const textLi = li.textContent.toLowerCase();
+    if (textLi.includes(valeurRecherchee)) {
+      li.style.display = "list-item";
+    } else {
+      li.style.display = "none";
+    }
+  });
+});
+
+//  EXO 3: CHANGER D'IMAGE AU SURVOL
+const img = document.querySelector(".image");
+
+img.onmouseenter = () => img.classList.add("image-2");
+img.onmouseleave = () => img.classList.remove("image-2");
