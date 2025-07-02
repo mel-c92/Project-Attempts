@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactions avec le DOM</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Mes interactions</h1>
-    <h2>Interactions avec un bouton</h2>
-    <button id="myBtn">Cliquez ici</button>
+    <div>
+      <h2>Interactions avec un bouton</h2>
+      <button id="myBtn">Cliquez ici</button>
+    </div>
+
+    <div class="myForm">
+      <form action="">
+        <div class="name">
+          <label for="name">Votre nom : </label>
+          <input type="text" id="name" autofocus required/>
+        </div>
+        <div class="email">
+          <label for="email">Votre mail : </label>
+          <input type="email" id="email" placeholder="exemple@gmail.com" required />
+        </div>
+        <input type="submit" value="Valider" />
+      </form>
+    </div>
 
     <script src="./index.js" defer></script>
   </body>

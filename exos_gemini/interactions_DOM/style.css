@@ -13,24 +13,49 @@ body {
 h1 {
   color: blanchedalmond;
   font-size: 3rem;
-  margin: 50px 0;
+  margin: 50px 20px;
 }
 
+div {
+  border: 1px dashed black;
+  margin: 20px auto;
+  width: 80%;
+}
 h2 {
   color: rgb(235, 235, 235);
 }
+.h2OtherStyle {
+  color: rgb(255, 152, 152);
+}
 
-button {
+button,
+input[type="submit"] {
   background: black;
-  border: none;
+  border: 0px;
   cursor: pointer;
   color: rgb(235, 235, 235);
   padding: 15px 20px;
   margin: 20px;
   border-radius: 30px;
+  transition: ease 0.2s;
 }
 
 .btnStyle {
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 0px 0px 7px black;
   color: blanchedalmond;
+}
+
+input[type="text"],
+input[type="email"] {
+  opacity: 0.6;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  color: rgb(255, 100, 100);
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgb(255, 152, 152);
 }
