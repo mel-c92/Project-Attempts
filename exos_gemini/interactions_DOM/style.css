@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+}
+
+h1 {
+  color: blanchedalmond;
+  font-size: 3rem;
+  margin: 50px 0;
+}
+
+h2 {
+  color: rgb(235, 235, 235);
+}
+
+button {
+  background: black;
+  border: none;
+  cursor: pointer;
+  color: rgb(235, 235, 235);
+  padding: 15px 20px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.btnStyle {
+  box-shadow: 1px 1px 1px black;
+  color: blanchedalmond;
+}
