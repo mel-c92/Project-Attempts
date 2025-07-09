@@ -28,11 +28,16 @@ h2 {
   color: rgb(94, 23, 23);
 }
 
+.bar {
+  width: 80%;
+  display: flex;
+}
+
 #enter-todo {
   border: solid 1px rgb(94, 23, 23);
   border-radius: 20px;
   height: 35px;
-  min-width: 300px;
+  min-width: 100vh;
   padding-left: 15px;
   color: whitesmoke;
   font-size: 1.1rem;
@@ -66,13 +71,47 @@ h2 {
   transform: scale(1.2);
 }
 
-ul {
-  padding: 20px 0 0 20px;
-  list-style: square inside;
-  color: rgb(49, 13, 13);
-  font-size: 1.1rem;
+button {
+  grid-area: "btn";
+  height: 30px;
+  min-width: 80px;
+  border-radius: 25px;
+  border: none;
+  background: rgb(94, 23, 23);
+  color: whitesmoke;
+  cursor: pointer;
+  transition: ease 0.2s;
+  font-size: 0.9rem;
 }
-.ul-style {
+
+button:active {
+  transform: scale(1.2);
+}
+
+ul {
+  margin: 20px 0;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  cursor: pointer;
+  list-style: none inside;
+  display: grid;
+  grid-template-areas: "li btn";
+  grid-template-columns: 75% 25%;
+  align-items: center;
+  gap: 25px;
+}
+
+li {
+  grid-area: "li";
   background: rgba(94, 23, 23, 0.6);
   border-radius: 10px;
+  padding: 10px 15px;
+  max-width: 100vh;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.todo-done {
+  text-decoration: line-through;
+  font-style: italic;
 }
