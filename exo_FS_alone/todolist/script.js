@@ -8,6 +8,7 @@ let listLi = document.querySelector(".list > ul");
 
 // A L'OUVERTURE DU NAVIGATEUR
 // permet la récupération des précédentes tâches à effectuer, non supprimées
+// A FAIRE EN EXO AUTONOME UNE AUTRE FOIS
 
 // MES EVENEMENTS
 // le bouton permettant d'ajouter une tâche dans la liste des tâches
@@ -35,3 +36,5 @@ addBtn.addEventListener("click", (e) => {
   });
   enterTodo.value = "";
 });
+
+// Storage part
